@@ -30,8 +30,6 @@ body {
 }
 
 
-
-
 .table {
     display: block;
     position:fixed;
@@ -41,4 +39,17 @@ body {
     border: 1px solid black;
     width: 105vw;
     height: 5vh;
+}
+
+.display1 {
+    position: fixed;
+    display: block;
+    margin: 125px auto;
+    margin-left: 400px;
+    border: 1px solid black;
+    height: 80vh;
+    width: 50vw;
+    text-align: center;
+    background-color: gray;
+    
 }
