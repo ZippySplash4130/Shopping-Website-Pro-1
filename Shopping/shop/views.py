@@ -5,6 +5,9 @@ from django.db.models import Q
 def first_website(requests):
     return render(requests, 'rawr.html')
 
+def sign_up(requests):
+    return render(requests, "signup.html")
+
 def search(request):
     query = request.GET.get('q', '')  # Get the search query from the URL
     results = []
