@@ -7,16 +7,3 @@ def first_website(requests):
 
 def sign_up(requests):
     return render(requests, "signup.html")
-
-def search(request):
-    query = request.GET.get('q', '')  # Get the search query from the URL
-    results = []
-    if query:
-        results = Book.objects.filter(
-            Q(title__icontains=query) | Q(author__icontains=query)
-        )  # Search in title or author
-    return render(request, 'rawr.html', {'query': query, 'results': results})
-
-def prodoct_list(requests):
-    products = Product.objects.all()
-    return render(requests, "rawr.html", {"Product" : products})

@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 # Create your models here.
 
@@ -18,3 +19,10 @@ class Order(models.Model):
     def __str__(self):
         return f"{self.quantity} of {self.product.name}"
 
+
+class Account(models.Model):
+    dof = models.DateField(null=True, blank=True)
+    groups = models.ManyToManyField("Group", related_name="users")
+
+class Group(models.Model):
+    name = models.CharField(max_length=500)
